@@ -1,6 +1,6 @@
 # KostLink
 
-Aplikasi ini merupakan suatu sistem terpadu yang bertujuan untuk mendukung kegiatan operasional dari suatu kos.
+KostLink merupakan suatu sistem terpadu yang bertujuan untuk mendukung kegiatan operasional dari suatu kos.
 
 ## Cara Menjalankan Aplikasi KostLink
 
@@ -310,15 +310,21 @@ Penggunaan H2 database menyediakan layanan pengelolaan data melalui console.
 
 Ketika aplikasi dijalankan, file database, yaitu kostlinkdb.mv.db, akan dibentuk pada penyimpanan perangkat lokal dan akan muncul URL yang dapat diakses sebagai web console untuk melakukan pemeriksaan database, yaitu
 
-http://localhost:8082
+`http://localhost:8082`
 
 Konfigurasi yang diperlukan untuk mengakses database, yaitu
 
-Driver Class: org.h2.Driver
+Driver Class: 
 
-JDBC URL: jdbc:h2:./kostlinkdb
+`org.h2.Driver`
 
-User Name: sa
+JDBC URL: 
+
+`jdbc:h2:./kostlinkdb`
+
+User Name: 
+
+`sa`
 
 Password dapat dibiarkan kosong.
 
@@ -326,7 +332,7 @@ Setelah itu, dapat dipilih opsi "Test Connection". Jika sukses, silakan pilih "C
 
 Untuk mengecek keseluruhan data pengguna yang terdaftar pada aplikasi, dapat dijalankan
 
-SELECT * FROM USERS;
+`SELECT * FROM USERS;`
 
 
 
@@ -339,8 +345,8 @@ Pembentukan proyek sudah memenuhi penerapan struktur Model-View-Controller secar
 Model merupakan komponen yang bertugas untuk mengelola data, state, business logic, dan interaksi dengan database. 
 
 Pada struktur proyek, terdapat
-- _package model_, yang berisikan domain model yang merepresentasikan data dan state dari User, Penghuni, dan PemilikKos, yang berisikan logika bisnis yang mengolah input yang diberikan pengguna serta memberikan output yang sesuai;
-- _package service_, yang berisikan domain model sebagai representasi data dan state dari User, Penghuni, dan PemilikKos, yang berisikan logika bisnis untuk mengolah input yang diberikan pengguna serta memberikan output yang sesuai;
+- _package model_, yang berisikan domain model yang merepresentasikan data dan state dari User, Penghuni, dan PemilikKos;
+- _package service_, yang berisikan logika bisnis untuk mengolah input yang diberikan pengguna serta memberikan output yang sesuai;
 - _package repository_, yang berisikan komponen yang berinteraksi dengan database untuk mengakses, menghapus, atau mengelola data pada database sesuai dengan kebutuhan yang diminta oleh suatu layanan;
 - _package entity_, yang berisikan UserEntity sebagai representasi entitas User pada database.
 
